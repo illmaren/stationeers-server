@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build -t didstopia/stationeers-server:latest .
+docker build -t illmaren/stationeers:latest .

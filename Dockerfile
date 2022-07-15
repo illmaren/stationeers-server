@@ -1,7 +1,7 @@
 
 FROM didstopia/base:nodejs-12-steamcmd-ubuntu-18.04
 
-LABEL maintainer="Didstopia <support@didstopia.com>"
+LABEL maintainer="Illmaren <support@illmaren.de>"
 
 # Fixes apt-get warnings
 ARG DEBIAN_FRONTEND=noninteractive
@@ -26,7 +26,6 @@ ADD start_stationeers.sh /app/start.sh
 WORKDIR /
 
 # Setup default environment variables for the server
-ENV STATIONEERS_SERVER_STARTUP_ARGUMENTS "-autostart -nographics -batchmode"
 ENV STATIONEERS_SERVER_NAME "A Docker Server"
 ENV STATIONEERS_WORLD_NAME "docker"
 ENV STATIONEERS_SERVER_SAVE_INTERVAL "300"
@@ -44,7 +43,7 @@ EXPOSE 27500/udp
 EXPOSE 27015/udp
 
 # Define directories to take ownership of
-ENV CHOWN_DIRS "/app,/steamcmd"
+ENV CHOWN_DIRS "/app/steamcmd"
 
 # Expose the volumes
 # VOLUME ["/steamcmd/stationeers"]
